@@ -3,6 +3,8 @@ title: "Jim's Docs"
 description: |
   Jim's Docs houses various technical documentation related to R meant to be shared.
 output_dir: "docs"
+base_url: https://jimbrig.github.io/jimsdocs/
+source_url: https://github.com/jimbrig/jimsdocs
 navbar:
   logo: images/R.png
   right:
