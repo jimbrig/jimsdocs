@@ -22,8 +22,7 @@ jobs:
 
       - name: Render Website
         run: |
-          Rscript -e 'install.packages("rmarkdown", "knitr", "distill")'
-          Rscript -e 'rmarkdown:::render_site()'
+          Rscript -e 'install.packages(c("rmarkdown", "knitr", "distill")); rmarkdown::render_site()'
 
       - name: Commit results
         run: |
