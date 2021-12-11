@@ -31,7 +31,8 @@ navbar:
       href: about.html
     - text: "Gallery"
       href: gallery.html
-    # - text: "Projects"
+    - text: "Changelog"
+      href: https://github.com/jimbrig/jimsdocs/CHANGELOG.md
     #   href: projects.html
     # - text: "Blogs"
     #   href: blogs.html
