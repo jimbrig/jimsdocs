@@ -32,12 +32,7 @@ navbar:
     - text: "Gallery"
       href: gallery.html
     - text: "Changelog"
-      href: https://github.com/jimbrig/jimsdocs/CHANGELOG.md
-    #   href: projects.html
-    # - text: "Blogs"
-    #   href: blogs.html
-    # - text: "Career"
-    #   href: career.html
+      href: https://github.com/jimbrig/jimsdocs/blob/master/CHANGELOG.md
     - icon: fas fa-search
       href: search.html
     - icon: fa fa-rss
