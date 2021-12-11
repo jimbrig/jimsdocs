@@ -1,0 +1,33 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this blog",
+      "description": "Some additional details about the blog",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-12-11T16:04:02-05:00"
+    },
+    {
+      "path": "CHANGELOG.html",
+      "author": [],
+      "contents": "\r\n\r\nContents\r\nChangelog\r\n[unreleased]\r\nFeatures\r\nConfig\r\n\r\n\r\n\r\nChangelog\r\nAll notable changes to this project will be documented in this file.\r\n[unreleased]\r\nFeatures\r\nAdd _includes for HTML files header.html and utterances.html\r\nEnhance _site.yml distill configuration file\r\nAdd new git-cliff and CHANGELOG functionality\r\nAdd my own custom distill CSS theme\r\nCreate various helper functions for creation of distill blog\r\nAdd custom JS scripts for use in the site\r\nNEW post for caching in R\r\nConfig\r\nIgnore artifacts for created website\r\nCleanup old assets and websites\r\nTweak asset images source files\r\n",
+      "last_modified": "2021-12-11T16:04:02-05:00"
+    },
+    {
+      "path": "gallery.html",
+      "title": "Gallery of Featured Rticles",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-12-11T16:04:03-05:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Jim's Docs",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-12-11T16:04:04-05:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

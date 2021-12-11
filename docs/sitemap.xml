@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
+  <url>
+    <loc>https://jimsdocs.jimbrig.com/about.html</loc>
+    <lastmod>2021-12-11T13:27:18-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://jimsdocs.jimbrig.com/CHANGELOG.html</loc>
+    <lastmod>2021-12-11T16:04:02-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://jimsdocs.jimbrig.com/gallery.html</loc>
+    <lastmod>2021-12-11T13:27:18-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://jimsdocs.jimbrig.com/</loc>
+    <lastmod>2021-12-11T13:27:18-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://jimsdocs.jimbrig.com/posts/2021-12-11-experimenting-with-caching-backends-in-r/</loc>
+    <lastmod>2021-12-11T15:36:44-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://jimsdocs.jimbrig.com/posts/2020-12-07-searching-from-r/</loc>
+    <lastmod>2021-12-11T13:27:18-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://jimsdocs.jimbrig.com/posts/welcome/</loc>
+    <lastmod>2021-12-11T13:27:18-05:00</lastmod>
+  </url>
+</urlset>
