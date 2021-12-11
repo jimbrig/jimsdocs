@@ -2,16 +2,41 @@ name: "jimsdocs"
 title: "Jim's Docs"
 description: |
   Jim's Docs houses various technical documentation related to R meant to be shared.
-output_dir: "docs"
-base_url: https://jimbrig.github.io/jimsdocs/
+output_dir: _site
+# theme: css/jimstheme.css
+twitter:
+  site: "@jimbrig"
+base_url: https://jimsdocs.jimbrig.com
+repository_url: https://github.com/jimbrig/jimsdocs
 source_url: https://github.com/jimbrig/jimsdocs
+favicon: images/favicon.ico
+collections:
+  posts:
+    categories: true
+    categories_metadata: true
+    authors_metadata: true
+    feed_items_max: 20
+  projects:
+    categories: true
+    categories_metadata: true
+    authors_metadata: false
+    feed_items_max: 20
 navbar:
   logo: images/R.png
+  search: true
   right:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Gallery"
+      href: gallery.html
+    # - text: "Projects"
+    #   href: projects.html
+    # - text: "Blogs"
+    #   href: blogs.html
+    # - text: "Career"
+    #   href: career.html
     - icon: fas fa-search
       href: search.html
     - icon: fa fa-rss
@@ -19,7 +44,18 @@ navbar:
     - icon: fab fa-linkedin-in
       href: https://www.linkedin.com/in/jimbrig
     - icon: fab fa-twitter
-      href: https://twitter.com/Jimmy82929796
+      href: https://twitter.com/jimbrig
     - icon: fab fa-github-alt
       href: https://github.com/jimbrig
-output: distill::distill_article
+
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    highlight: default
+    code_folding: show
+    code_download: true
+    includes:
+      in_header:
+        - _includes/header.html
+        # - _includes/utterances.html
