@@ -2,7 +2,7 @@ name: "jimsdocs"
 title: "Jim's Docs"
 description: |
   Jim's Docs houses various technical documentation related to R meant to be shared.
-output_dir: _site
+output_dir: docs
 # theme: css/jimstheme.css
 twitter:
   site: "@jimbrig"
