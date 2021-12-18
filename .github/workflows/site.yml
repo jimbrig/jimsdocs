@@ -1,0 +1,30 @@
+on:
+  repository_dispatch:
+  push:
+    branches: master
+
+name: Render & Deploy Site
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: r-lib/actions/setup-r@master
+
+      - uses: r-lib/actions/setup-pandoc@master
+
+      - name: Install dependencies, save github token for gh(), render site
+        run: |
+          github_token <- "${{ secrets.GITHUB_TOKEN }}"
+          install.packages(c("distill", "postcards", "devtools",
+          "fs", "htmltools", "here", "magick", "gh", "jsonlite"))
+          rmarkdown::render_site(encoding = "UTF-8")
+        shell: Rscript {0}
+        
+      - name: Commit results
+        run: |
+          git add -A
+          git commit -m 'Rebuild site' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
