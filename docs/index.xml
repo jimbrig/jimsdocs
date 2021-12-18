@@ -12,7 +12,15 @@
       <link>https://jimsdocs.jimbrig.com</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 11 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Dealing with Images in R</title>
+      <dc:creator>Jimmy Briggs</dc:creator>
+      <link>https://jimsdocs.jimbrig.com/posts/2021-12-18-dealing-with-images-in-r</link>
+      <description>A walkthrough of dealing with images in R and creating a custom image gallery.</description>
+      <guid>https://jimsdocs.jimbrig.com/posts/2021-12-18-dealing-with-images-in-r</guid>
+      <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Experimenting with Caching Backends in R</title>
       <dc:creator>Jimmy Briggs</dc:creator>
