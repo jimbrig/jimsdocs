@@ -1,0 +1,22 @@
+.btn {
+  border-width: 0 0px 0px 0px;
+  font-weight: normal;
+  text-transform: ;
+}
+.btn-default {
+  color: #2ecc71;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+pre {
+  max-height: 600px;
+  overflow-x: auto;
+}
+
+.table .table-condensed {
+  width: 40% !important;
+  max-width: 200px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
