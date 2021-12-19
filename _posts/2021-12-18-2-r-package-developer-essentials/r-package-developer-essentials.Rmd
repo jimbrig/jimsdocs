@@ -1,0 +1,118 @@
+---
+title: R Package Developer Essentials
+description: |
+  A walkthrough of the various packages, tools, resources, and axioms I have 
+  encountered over my years as an R package sofware engineer. 
+author:
+  - name: Jimmy Briggs 
+    url: https://devfolio.jimbrig.com
+date: '2021-12-18'
+output: 
+  distill::distill_article:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+bibliography: references.bib
+preview: 'images/R.jpg'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+options(knitr.table.format = "html") 
+library(tibble)
+library(knitr)
+library(kableExtra)
+library(tufte)
+```
+
+People who program using the R language can be separated into two core
+buckets:
+
+1.  R Developers
+2.  R Users
+
+To distinguish, R developers *develop* new innovative solutions while R
+Users *use* the tools and packages that the developers created. This
+article is aimed towards the development side of the spectrum and
+attempts to provide a comprehensive, curated toolbox for the R
+Developer, specifically in regard to developing R Packages.
+
+## Pre-Requisite Readings
+
+To start, R package developers need to be familiar with the fundamentals
+of package development, and therefore should be familiar with some of
+the highest regarded resources available to read.
+
+Anyone who is serious about developing production grade R packages needs
+to be familiar with most of, if not all of the following resources and
+guides:
+
+```{r}
+data <- tibble::tribble(
+  ~Resource,                                                                ~Source,
+  "[Writing R Extensions](http://cran.fhcrc.org/doc/manuals/R-exts.html)", "[CRAN Manuals](https://cran.r-project.org/manuals.html)",
+  "[R Packages](http://r-pkgs.had.co.nz/)",                                    "[Hadley Wickham](http://hadley.nz/)",
+  "[R Package Primer](http://kbroman.org/pkg_primer/)",               "[Karl Broman](https://kbroman.org/)",
+  "[Package Guidelines](http://www.bioconductor.org/developers/package-guidelines/)",             "Bioconductor",
+  "[rOpenSci Packages Developer Guide](https://devguide.ropensci.org/index.html)", "[rOpenSci](https://ropensci.org/)"
+) 
+
+data %>% 
+  knitr::kable(align = "c", booktabs = TRUE, 
+               caption = "R Package Developer Essential Resources") %>%
+  kableExtra::kable_material(c("striped"), full_width = TRUE) %>%
+  kableExtra::row_spec(0, bold = TRUE, color = "white", background = "black")
+```
+
+<details><summary>View Citations</summary><p>
+
+[@wickhamb; @whypacka; @vidoni; @initiativea; @anintro; @gandrud2015;
+@glennie2020; @owen-the; @riederera; @spector2004; @teama; @whypackb;
+@wickhamc; @zhua]
+
+</p></details></p></summary></details>
+
+### Writing R Extensions Manual
+
+The [Writing R Extensions
+Manual](http://cran.fhcrc.org/doc/manuals/R-exts.html) is perhaps the
+most crucial resource listed above, and has even been considered the
+*Bible of R Package Development*.
+
+However, it is very exhaustive and not the most visually-appealing
+write-up.
+
+As Hadley puts it in his book [Writing R Packages](): [@wickham]
+
+> "The best resource for the official details of package development is
+> always the official writing R extensions manual. However, this manual
+> can be hard to understand if you're not already familiar with the
+> basics of packages. It's also exhaustive, covering every possible
+> package component, rather than focusing on the most common and useful
+> components, as this book does. Writing R extensions is a useful
+> resource once you've mastered the basics and want to learn what's
+> going on under the hood."
+>
+> `r tufte::quote_footer('--- Hadley Wickham')`
+
+Thanks to [Colin Fay](https://colinfay.me/), a more elegant version of
+the original manual has been created as a [bookdown]() site and
+published online at <https://colinfay.me/writing-r-extensions>.
+
+This resource is highly encouraged for anyone taking R Package
+Development seriously.
+
+*Note: The other manuals listed on the [CRAN
+Manuals](https://cran.r-project.org/manuals.html) website contain a lot
+of hidden gems that are often overlooked by R developers. These
+resources contain some of the most crucial, foundational knowledge that
+anyone using R should eventually be made aware of, therefore I highly
+recommend you check those out in addition to Writing R Extensions*.
+
+## Package Development Fundamentals
+
+R Package development can be broken down into the following fundamental
+areas of development:
+
+``` mermaid
+```

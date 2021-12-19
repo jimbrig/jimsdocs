@@ -16,3 +16,7 @@ AutoAppendNewline: Yes
 StripTrailingWhitespace: Yes
 
 BuildType: Website
+
+MarkdownReferences: Section
+
+ZoteroLibraries: "My Library"
