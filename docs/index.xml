@@ -16,11 +16,6 @@
     <item>
       <title>Dealing with Images in R</title>
       <dc:creator>Jimmy Briggs</dc:creator>
-<<<<<<< Updated upstream
-      <link>https://jimsdocs.jimbrig.com/posts/2021-12-18-dealing-with-images-in-r</link>
-      <description>A walkthrough of dealing with images in R and creating a custom image gallery.</description>
-      <guid>https://jimsdocs.jimbrig.com/posts/2021-12-18-dealing-with-images-in-r</guid>
-=======
       <link>https://jimsdocs.jimbrig.com/posts/2021-12-18-1-dealing-with-images-in-r</link>
       <description>A walkthrough of dealing with images in R and creating a custom image gallery.</description>
       <guid>https://jimsdocs.jimbrig.com/posts/2021-12-18-1-dealing-with-images-in-r</guid>
@@ -33,7 +28,6 @@
       <description>A walkthrough of the various packages, tools, resources, and axioms I have 
 encountered over my years as an R package sofware engineer.</description>
       <guid>https://jimsdocs.jimbrig.com/posts/2021-12-18-2-r-package-developer-essentials</guid>
->>>>>>> Stashed changes
       <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
     </item>
     <item>
