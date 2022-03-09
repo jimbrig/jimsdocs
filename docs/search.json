@@ -1,3 +1,4 @@
+<<<<<<< refs/remotes/origin/master
 {
   "articles": [
     {
@@ -31,3 +32,38 @@
   ],
   "collections": ["posts/posts.json"]
 }
+=======
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this blog",
+      "description": "Some additional details about the blog",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-03-08T21:45:32-05:00"
+    },
+    {
+      "path": "CHANGELOG.html",
+      "author": [],
+      "contents": "\r\n\r\nContents\r\nChangelog\r\n[unreleased]\r\nDocumentation\r\nFeatures\r\nBug\r\nConfig\r\n\r\n\r\n\r\nChangelog\r\nAll notable changes to this project will be documented in this file.\r\n[unreleased]\r\nDocumentation\r\nAdd CHANGELOG\r\nFeatures\r\nAdd _includes for HTML files header.html and utterances.html\r\nEnhance _site.yml distill configuration file\r\nAdd new git-cliff and CHANGELOG functionality\r\nAdd my own custom distill CSS theme\r\nCreate various helper functions for creation of distill blog\r\nAdd custom JS scripts for use in the site\r\nNEW post for caching in R\r\nAdd github action workflow to render the site on push\r\nChange _site.yml to use docs, not _site for GH Pages\r\nManually add back docs dir for GH pages\r\nBug\r\nNeed packages first in workflow file\r\nConfig\r\nIgnore artifacts for created website\r\nCleanup old assets and websites\r\nTweak asset images source files\r\nUpdate Github action workflow with distill R package\r\n",
+      "last_modified": "2022-03-08T21:45:32-05:00"
+    },
+    {
+      "path": "gallery.html",
+      "title": "Gallery of Featured Rticles",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-03-08T21:45:33-05:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Jim's Docs",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-03-08T21:45:34-05:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}
+>>>>>>> new posts
