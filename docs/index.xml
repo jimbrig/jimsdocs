@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Jim's Docs</title>
+    <link>https://jimsdocs.jimbrig.com</link>
+    <atom:link href="https://jimsdocs.jimbrig.com/index.xml" rel="self" type="application/rss+xml"/>
+    <description>Jim's Docs houses various technical documentation related to R meant to be shared.
+</description>
+    <image>
+      <title>Jim's Docs</title>
+      <url>https://jimsdocs.jimbrig.com/images/favicon.ico</url>
+      <link>https://jimsdocs.jimbrig.com</link>
+    </image>
+    <generator>Distill</generator>
+    <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Building the Foundation of a Comprehensive Actuarial Analysis</title>
+      <dc:creator>Jimmy Briggs</dc:creator>
+      <link>https://jimsdocs.jimbrig.com/posts/2022-03-08-building-blocks-of-a-comprehensive-actuarial-analyses</link>
+      <description>In Part I of the multi-post series I introduce how to build the foundation of a Comprehensive Actuarial Analysis.</description>
+      <guid>https://jimsdocs.jimbrig.com/posts/2022-03-08-building-blocks-of-a-comprehensive-actuarial-analyses</guid>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Create a Custom R Project Launcher</title>
+      <dc:creator>Jimmy Briggs</dc:creator>
+      <link>https://jimsdocs.jimbrig.com/posts/2022-01-04-create-a-custom-r-project-launcher</link>
+      <description>Introducing a simple, yet powerful tool I created to quickly launch any R project.</description>
+      <guid>https://jimsdocs.jimbrig.com/posts/2022-01-04-create-a-custom-r-project-launcher</guid>
+      <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dealing with Images in R</title>
+      <dc:creator>Jimmy Briggs</dc:creator>
+      <link>https://jimsdocs.jimbrig.com/posts/2021-12-18-1-dealing-with-images-in-r</link>
+      <description>A walkthrough of dealing with images in R and creating a custom image gallery.</description>
+      <guid>https://jimsdocs.jimbrig.com/posts/2021-12-18-1-dealing-with-images-in-r</guid>
+      <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>R Package Developer Essentials</title>
+      <dc:creator>Jimmy Briggs</dc:creator>
+      <link>https://jimsdocs.jimbrig.com/posts/2021-12-18-2-r-package-developer-essentials</link>
+      <description>A walkthrough of the various packages, tools, resources, and axioms I have 
+encountered over my years as an R package sofware engineer.</description>
+      <guid>https://jimsdocs.jimbrig.com/posts/2021-12-18-2-r-package-developer-essentials</guid>
+      <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Experimenting with Caching Backends in R</title>
+      <dc:creator>Jimmy Briggs</dc:creator>
+      <link>https://jimsdocs.jimbrig.com/posts/2021-12-11-experimenting-with-caching-backends-in-r</link>
+      <description>Take a look at some of the more advanced, modern ways of utilizing backend caching with hosted applications or workflows.</description>
+      <guid>https://jimsdocs.jimbrig.com/posts/2021-12-11-experimenting-with-caching-backends-in-r</guid>
+      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://jimsdocs.jimbrig.com/posts/2021-12-11-experimenting-with-caching-backends-in-r/images/caching.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Searching from R</title>
+      <dc:creator>Jimmy Briggs</dc:creator>
+      <link>https://jimsdocs.jimbrig.com/posts/2020-12-07-searching-from-r</link>
+      <description>'Utilize advanced searching techniques to quickly launch a search from R'</description>
+      <guid>https://jimsdocs.jimbrig.com/posts/2020-12-07-searching-from-r</guid>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://jimsdocs.jimbrig.com/posts/2020-12-07-searching-from-r/images/magnifying_glass.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Welcome to Jim's Docs</title>
+      <dc:creator>Nora Jones</dc:creator>
+      <link>https://jimsdocs.jimbrig.com/posts/welcome</link>
+      <description>Welcome to our new blog, Jim's Docs. We hope you enjoy 
+reading what we have to say!</description>
+      <guid>https://jimsdocs.jimbrig.com/posts/welcome</guid>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
