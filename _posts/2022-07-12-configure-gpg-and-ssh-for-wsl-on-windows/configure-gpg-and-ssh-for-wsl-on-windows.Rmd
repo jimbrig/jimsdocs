@@ -1,0 +1,308 @@
+---
+title: "Configure GPG and SSH for WSL on Windows"
+description: |
+  Learn how to properly manage and conigure your precious SSH and GPG keys with Windows Subsystem for Linux.
+tags:
+  - Development
+  - Linux
+  - GPG
+  - SSH
+  - Git
+  - WSL
+  - Windows
+  - Guide
+author:
+  - name: Jimmy Briggs
+    url: https://github.com/jimbrig
+date: 2022-07-12
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Overview
+
+*See a detailed guide in my core dotfiles repo here: https://github.com/jimbrig/jimsdots/tree/main/gpg*.
+
+This post walks through my routine for setting up and configuring my WSL distros with SSH and GPG keys.
+
+## Pre-Requisites
+
+To follow along you will need the following:
+
+1. Windows Operating System
+2. Windows Sub System for Linux Installed
+3. A Linux Distribution (i.e. Ubuntu) Installed
+4. Git installed on Windows
+5. **Windows `%PATH%` pointing to the `/usr/bin` directory of the Git for Windows Installation Directory.**
+6. Git and GPG installed in Linux Distribution.
+
+## Reference: GPG Commands
+
+First, let's cover some basic `gpg` commands to familiarize ourselves with the command line utility:
+
+Running `gpg --help` outputs quite a handful:
+
+```
+> gpg --help
+
+gpg (GnuPG) 2.2.29-unknown
+libgcrypt 1.9.3-unknown
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: /c/Users/jimmy/.gnupg
+Supported algorithms:
+Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+
+Syntax: gpg [options] [files]
+Sign, check, encrypt or decrypt
+Default operation depends on the input data
+
+Commands:
+
+ -s, --sign                  make a signature
+     --clear-sign            make a clear text signature
+ -b, --detach-sign           make a detached signature
+ -e, --encrypt               encrypt data
+ -c, --symmetric             encryption only with symmetric cipher
+ -d, --decrypt               decrypt data (default)
+     --verify                verify a signature
+ -k, --list-keys             list keys
+     --list-signatures       list keys and signatures
+     --check-signatures      list and check key signatures
+     --fingerprint           list keys and fingerprints
+ -K, --list-secret-keys      list secret keys
+     --generate-key          generate a new key pair
+     --quick-generate-key    quickly generate a new key pair
+     --quick-add-uid         quickly add a new user-id
+     --quick-revoke-uid      quickly revoke a user-id
+     --quick-set-expire      quickly set a new expiration date
+     --full-generate-key     full featured key pair generation
+     --generate-revocation   generate a revocation certificate
+     --delete-keys           remove keys from the public keyring
+     --delete-secret-keys    remove keys from the secret keyring
+     --quick-sign-key        quickly sign a key
+     --quick-lsign-key       quickly sign a key locally
+     --quick-revoke-sig      quickly revoke a key signature
+     --sign-key              sign a key
+     --lsign-key             sign a key locally
+     --edit-key              sign or edit a key
+     --change-passphrase     change a passphrase
+     --export                export keys
+     --send-keys             export keys to a keyserver
+     --receive-keys          import keys from a keyserver
+     --search-keys           search for keys on a keyserver
+     --refresh-keys          update all keys from a keyserver
+     --import                import/merge keys
+     --card-status           print the card status
+     --edit-card             change data on a card
+     --change-pin            change a card's PIN
+     --update-trustdb        update the trust database
+     --print-md              print message digests
+     --server                run in server mode
+     --tofu-policy VALUE     set the TOFU policy for a key
+
+Options:
+
+ -a, --armor                 create ascii armored output
+ -r, --recipient USER-ID     encrypt for USER-ID
+ -u, --local-user USER-ID    use USER-ID to sign or decrypt
+ -z N                        set compress level to N (0 disables)
+     --textmode              use canonical text mode
+ -o, --output FILE           write output to FILE
+ -v, --verbose               verbose
+ -n, --dry-run               do not make any changes
+ -i, --interactive           prompt before overwriting
+     --openpgp               use strict OpenPGP behavior
+
+(See the man page for a complete listing of all commands and options)
+
+Examples:
+
+ -se -r Bob [file]          sign and encrypt for user Bob
+ --clear-sign [file]        make a clear text signature
+ --detach-sign [file]       make a detached signature
+ --list-keys [names]        show keys
+ --fingerprint [names]      show fingerprints
+
+Please report bugs to <https://bugs.gnupg.org>.
+
+```
+
+To skip all the excess hoop-lah, let's focus on the commands we need.
+
+### Generating Keys
+
+```bash
+gpg --full-generate-key
+
+gpg --default-new-key-algo rsa4096 --gen-key
+
+```
+
+- **gpg --full-generate-key**: will generate a GPG key for you (select *RSA*, *4096 Bits*, *No Expiration*, etc.).
+  - Alternatively you can run **gpg --default-new-key-algo rsa4096 --gen-key**
+
+> Note: When asked to enter your email address, ensure that you enter the verified email address for your GitHub account. To keep your email address private, use your GitHub-provided no-reply email address. For more information, see "Verifying your email address" and "Setting your commit email address."
+
+### Listing Keys
+
+```bash
+
+gpg --list-secret-keys --keyid-format LONG
+
+gpg --armor --export <keyid> | clip.exe
+
+```
+
+Next, list the keys via: **gpg --list-secret-keys --keyid-format LONG** and copy the ID of the key you want to use. 
+
+- **gpg --list-secret-keys**: will list your secret key signatures  
+
+- **gpg --armor --list-secret-keys**: will list your secret key signatures using the `armor` flag which allows for output in normal format text.
+  - *NOTE: you can use the shorthand `-a` flag instead of `--armor` also.
+
+Run **gpg --armor --export <keyid> | clip.exe** to output the key's text to your clipboard.
+
+### Exporting Keys 
+
+To export a key to a file run the same command but instead of *piping* into the clipboard, utilize the *output redirection* `>` syntax:
+
+```bash
+gpg -a --export
+
+gpg --armor --export <keyid> > public.key
+
+gpg -a --export > publickeys.asc
+
+gpg -a --export-secret-keys > privatekeys.asc
+
+gpg --export-secret-keys {{KEY_ID}} > privatekey.key
+
+gpg --export-ownertrust > ownertrust.txt
+
+```
+
+- **gpg -a --export**: will export public keys
+- **gpg -a --export > publickeys.asc** will export the public keys to an importable file.
+- **gpg -a --export-secret-keys > privatekeys.asc** will export private keys to an importable file.
+
+To export an individual key, utilize a key identifier:
+
+- **gpg --export-secret-keys {{KEY_ID}} > privatekey.key**
+
+To export the *trustdb* run **gpg --export-ownertrust > ownertrust.txt**.
+
+### Add Keys to GitHub
+
+Navigate to https://github.com/settings/keys and add the key to your GitHub account.
+
+Alternatively, utilize `gh-cli` to automatically upload the GPG key for you via:
+
+```bash
+gh gpg-key add <key-file>
+```
+
+### Importing Keys
+
+```bash
+gpg --import privatekeys.asc
+gpg --import publickeys.asc
+gpg --import-ownertrust ownertrust.txt
+```
+
+### Testing Keys
+
+```bash
+gpg -k
+gpg -K
+```
+As the new user, test encryption and decryption with **gpg -er <USERID>** and **gpg -d** commands.
+
+Keep in mind that decryption and signing will likely fail unless the user running `gpg` owns the terminal it is running on (Translation: don't `su` over to the new user; login directly via `ssh` or console).
+
+
+## Scripts
+
+### Installations
+
+- Linux:
+
+```bash
+sudo apt update && sudo apt -y upgrade
+
+sudo apt install socat gpg
+
+echo pinentry-program /mnt/c/Program\ Files\ \(x86\)/Gpg4win/bin/pinentry.exe >  ~/.gnupg/gpg-agent.conf
+
+gpg-connect-agent reloadagent /bye
+```
+
+- Windows:
+
+```powershell
+sudo cinst -y gpg4win
+```
+
+### Backup GPG Keys
+
+See [backup-gpg-keys.sh](https://github.com/jimbrig/jimsdots/blob/main/gpg/scripts/backup-gpg-keys.sh) for bash/shell implementation:
+
+```bash
+#!/usr/bin/env bash
+
+# backup private keys to asc file
+gpg --export-secret-keys --armor "Jimmy Briggs" > private-keys-backup.asc
+
+# backup trustdb
+gpg --export-ownertrust > trustdb-backup.txt
+```
+
+See [export-gpg-keys.ps1](https://github.com/jimbrig/jimsdots/blob/main/gpg/scripts/export-gpg-keys.ps1) for PowerShell script to Export keys from Windows side:
+
+```powershell
+gpg -a --export > $HOME\.dotfiles\gpg\backup\public-keys.asc
+gpg -a --export-secret-keys > $HOME\.dotfiles\gpg\backup\private-keys.asc
+gpg --export-ownertrust > $HOME\.dotfiles\gpg\backup\owner-trust.txt
+```
+
+### Import Key Scripts
+
+Then, re-import using PowerShell like so:
+
+```powershell
+gpg --import $HOME\.dotfiles\gpg\backup\private-keys.asc
+gpg --import $HOME\.dotfiles\gpg\backup\public-keys.asc
+gpg --import $HOME\.dotfiles\gpg\backup\owner-trust.txt
+
+# Test:
+gpg -k
+gpg -K
+```
+
+To import using bash:
+
+```bash
+# restore private keys from asc file
+gpg —-import gpg-secret-key-backup.asc
+
+# delete existing trust database
+rm ~/.gnupg/trustdb.gpg
+
+# restore the trustdb
+gpg --import-ownertrust < trustdb-backup.txt
+```
+

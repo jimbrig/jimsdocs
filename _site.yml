@@ -32,7 +32,7 @@ navbar:
     - text: "Gallery"
       href: gallery.html
     - text: "Changelog"
-      href: https://github.com/jimbrig/jimsdocs/blob/master/CHANGELOG.md
+      href: CHANGELOG.html
     - icon: fas fa-search
       href: search.html
     - icon: fa fa-rss
@@ -54,4 +54,4 @@ output:
     includes:
       in_header:
         - _includes/header.html
-        # - _includes/utterances.html
+        - _includes/utterances.html
