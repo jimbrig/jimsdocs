@@ -1,0 +1,48 @@
+---
+title: "CHANGELOG"
+description: |
+  All notable changes to this project will be documented in this file.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## [Unreleased]
+
+### Documentation
+
+- Add CHANGELOG
+- Create README
+- Add action badge to README
+- Update changelog.md
+
+### Features
+
+- Add _includes for HTML files header.html and utterances.html
+- Enhance _site.yml distill configuration file
+- Add new git-cliff and CHANGELOG functionality
+- Add my own custom distill CSS theme
+- Create various helper functions for creation of distill blog
+- Add custom JS scripts for use in the site
+- NEW post for caching in R
+- Add github action workflow to render the site on push 
+- Change _site.yml to use docs, not _site for GH Pages
+- Manually add back docs dir for GH pages
+- Add CHANGELOG to header of site
+- Make CNAME persistent between builds
+- New post
+
+### Bug
+
+- Need packages first in workflow file 
+- Fix href to CHANGELOG in site config
+
+### Config
+
+- Ignore artifacts for created website
+- Cleanup old assets and websites
+- Tweak asset images source files
+- Update Github action workflow with distill R package
+- Re-ignore docs/ with new GH action
+- Update docs/ site dir

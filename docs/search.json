@@ -5,28 +5,36 @@
       "title": "About this blog",
       "description": "Some additional details about the blog",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2022-03-09T03:03:02+00:00"
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-07-12T20:39:11-04:00"
     },
     {
       "path": "CHANGELOG.html",
       "author": [],
-      "contents": "\n\nContents\nChangelog[unreleased]Documentation\nFeatures\nBug\nConfig\n\n\n\nChangelog\nAll notable changes to this project will be documented in this file.\n[unreleased]\nDocumentation\nAdd CHANGELOG\nFeatures\nAdd _includes for HTML files header.html and utterances.html\nEnhance _site.yml distill configuration file\nAdd new git-cliff and CHANGELOG functionality\nAdd my own custom distill CSS theme\nCreate various helper functions for creation of distill blog\nAdd custom JS scripts for use in the site\nNEW post for caching in R\nAdd github action workflow to render the site on push\nChange _site.yml to use docs, not _site for GH Pages\nManually add back docs dir for GH pages\nBug\nNeed packages first in workflow file\nConfig\nIgnore artifacts for created website\nCleanup old assets and websites\nTweak asset images source files\nUpdate Github action workflow with distill R package\n",
-      "last_modified": "2022-03-09T03:03:03+00:00"
+      "contents": "\r\n\r\nContents\r\n[Unreleased]\r\nDocumentation\r\nFeatures\r\nBug\r\nConfig\r\n\r\n\r\n[Unreleased]\r\nDocumentation\r\nAdd CHANGELOG\r\nCreate README\r\nAdd action badge to README\r\nUpdate changelog.md\r\nFeatures\r\nAdd _includes for HTML files header.html and utterances.html\r\nEnhance _site.yml distill configuration file\r\nAdd new git-cliff and CHANGELOG functionality\r\nAdd my own custom distill CSS theme\r\nCreate various helper functions for creation of distill blog\r\nAdd custom JS scripts for use in the site\r\nNEW post for caching in R\r\nAdd github action workflow to render the site on push\r\nChange _site.yml to use docs, not _site for GH Pages\r\nManually add back docs dir for GH pages\r\nAdd CHANGELOG to header of site\r\nMake CNAME persistent between builds\r\nNew post\r\nBug\r\nNeed packages first in workflow file\r\nFix href to CHANGELOG in site config\r\nConfig\r\nIgnore artifacts for created website\r\nCleanup old assets and websites\r\nTweak asset images source files\r\nUpdate Github action workflow with distill R package\r\nRe-ignore docs/ with new GH action\r\nUpdate docs/ site dir\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-07-12T20:39:13-04:00"
+    },
+    {
+      "path": "CHANGELOG.html",
+      "title": "CHANGELOG",
+      "description": "All notable changes to this project will be documented in this file.",
+      "author": [],
+      "contents": "\r\n\r\nContents\r\n[Unreleased]\r\nDocumentation\r\nFeatures\r\nBug\r\nConfig\r\n\r\n\r\n[Unreleased]\r\nDocumentation\r\nAdd CHANGELOG\r\nCreate README\r\nAdd action badge to README\r\nUpdate changelog.md\r\nFeatures\r\nAdd _includes for HTML files header.html and utterances.html\r\nEnhance _site.yml distill configuration file\r\nAdd new git-cliff and CHANGELOG functionality\r\nAdd my own custom distill CSS theme\r\nCreate various helper functions for creation of distill blog\r\nAdd custom JS scripts for use in the site\r\nNEW post for caching in R\r\nAdd github action workflow to render the site on push\r\nChange _site.yml to use docs, not _site for GH Pages\r\nManually add back docs dir for GH pages\r\nAdd CHANGELOG to header of site\r\nMake CNAME persistent between builds\r\nNew post\r\nBug\r\nNeed packages first in workflow file\r\nFix href to CHANGELOG in site config\r\nConfig\r\nIgnore artifacts for created website\r\nCleanup old assets and websites\r\nTweak asset images source files\r\nUpdate Github action workflow with distill R package\r\nRe-ignore docs/ with new GH action\r\nUpdate docs/ site dir\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-07-12T20:39:13-04:00"
     },
     {
       "path": "gallery.html",
       "title": "Gallery of Featured Rticles",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2022-03-09T03:03:05+00:00"
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-07-12T20:39:13-04:00"
     },
     {
       "path": "index.html",
       "title": "Jim's Docs",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2022-03-09T03:03:07+00:00"
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-07-12T20:39:14-04:00"
     }
   ],
   "collections": ["posts/posts.json"]

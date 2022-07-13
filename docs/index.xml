@@ -12,7 +12,15 @@
       <link>https://jimsdocs.jimbrig.com</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Configure GPG and SSH for WSL on Windows</title>
+      <dc:creator>Jimmy Briggs</dc:creator>
+      <link>https://jimsdocs.jimbrig.com/posts/2022-07-12-configure-gpg-and-ssh-for-wsl-on-windows</link>
+      <description>Learn how to properly manage and conigure your precious SSH and GPG keys with Windows Subsystem for Linux.</description>
+      <guid>https://jimsdocs.jimbrig.com/posts/2022-07-12-configure-gpg-and-ssh-for-wsl-on-windows</guid>
+      <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Building the Foundation of a Comprehensive Actuarial Analysis</title>
       <dc:creator>Jimmy Briggs</dc:creator>
