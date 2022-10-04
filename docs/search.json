@@ -6,13 +6,13 @@
       "description": "Some additional details about the blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-07-13T01:19:03+00:00"
+      "last_modified": "2022-10-04T00:53:29+00:00"
     },
     {
       "path": "CHANGELOG.html",
       "author": [],
       "contents": "\n\nContents\n[Unreleased]Documentation\nFeatures\nBug\nConfig\n\n\n[Unreleased]\nDocumentation\nAdd CHANGELOG\nCreate README\nAdd action badge to README\nUpdate changelog.md\nFeatures\nAdd _includes for HTML files header.html and utterances.html\nEnhance _site.yml distill configuration file\nAdd new git-cliff and CHANGELOG functionality\nAdd my own custom distill CSS theme\nCreate various helper functions for creation of distill blog\nAdd custom JS scripts for use in the site\nNEW post for caching in R\nAdd github action workflow to render the site on push\nChange _site.yml to use docs, not _site for GH Pages\nManually add back docs dir for GH pages\nAdd CHANGELOG to header of site\nMake CNAME persistent between builds\nNew post\nBug\nNeed packages first in workflow file\nFix href to CHANGELOG in site config\nConfig\nIgnore artifacts for created website\nCleanup old assets and websites\nTweak asset images source files\nUpdate Github action workflow with distill R package\nRe-ignore docs/ with new GH action\nUpdate docs/ site dir\n\n\n\n",
-      "last_modified": "2022-07-13T01:19:04+00:00"
+      "last_modified": "2022-10-04T00:53:33+00:00"
     },
     {
       "path": "CHANGELOG.html",
@@ -20,21 +20,21 @@
       "description": "All notable changes to this project will be documented in this file.",
       "author": [],
       "contents": "\n\nContents\n[Unreleased]Documentation\nFeatures\nBug\nConfig\n\n\n[Unreleased]\nDocumentation\nAdd CHANGELOG\nCreate README\nAdd action badge to README\nUpdate changelog.md\nFeatures\nAdd _includes for HTML files header.html and utterances.html\nEnhance _site.yml distill configuration file\nAdd new git-cliff and CHANGELOG functionality\nAdd my own custom distill CSS theme\nCreate various helper functions for creation of distill blog\nAdd custom JS scripts for use in the site\nNEW post for caching in R\nAdd github action workflow to render the site on push\nChange _site.yml to use docs, not _site for GH Pages\nManually add back docs dir for GH pages\nAdd CHANGELOG to header of site\nMake CNAME persistent between builds\nNew post\nBug\nNeed packages first in workflow file\nFix href to CHANGELOG in site config\nConfig\nIgnore artifacts for created website\nCleanup old assets and websites\nTweak asset images source files\nUpdate Github action workflow with distill R package\nRe-ignore docs/ with new GH action\nUpdate docs/ site dir\n\n\n\n",
-      "last_modified": "2022-07-13T01:19:04+00:00"
+      "last_modified": "2022-10-04T00:53:33+00:00"
     },
     {
       "path": "gallery.html",
       "title": "Gallery of Featured Rticles",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-07-13T01:19:04+00:00"
+      "last_modified": "2022-10-04T00:53:35+00:00"
     },
     {
       "path": "index.html",
       "title": "Jim's Docs",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-07-13T01:19:05+00:00"
+      "last_modified": "2022-10-04T00:53:37+00:00"
     }
   ],
   "collections": ["posts/posts.json"]
